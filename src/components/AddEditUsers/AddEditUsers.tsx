@@ -38,7 +38,7 @@ const AddEditUsers = () => {
             className="w-full h-10 border mt-1 rounded px-4 bg-gray-50"
           />
         </div>
-        <button className="bg-green-500 px-6 py-3 rounded-lg mt-6 mr-5 mb-2">اضافه کردن</button>
+        <button className="bg-green-400 px-6 py-3 rounded-lg mt-6 mr-5 mb-2 hover:bg-green-500">اضافه کردن</button>
       </div>
     </div>
   );

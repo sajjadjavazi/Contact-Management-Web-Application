@@ -9,7 +9,7 @@ const Search = () => {
         aria-describedby="button-addon3"
       />
       <button
-        className="bg-stone-400 px-6 py-3 rounded-l-lg"
+        className="bg-stone-400 hover:bg-stone-500 px-6 py-3 rounded-l-lg"
         data-twe-ripple-init
         data-twe-ripple-color="white"
         type="button"
