@@ -7,38 +7,38 @@ const AddEditUsers = () => {
           <label htmlFor="#">نام:</label>
           <input
             type="text"
-            className="w-full h-10 border mt-1 rounded px-4  bg-gray-50"
+            className="w-full h-10 border mt-1 rounded px-4 mb-4 bg-gray-50"
           />
         </div>
         <div className="mx-4">
           <label htmlFor="#">نام خانوادگی:</label>
           <input
             type="text"
-            className="w-full h-10 border mt-1 rounded px-4  bg-gray-50"
+            className="w-full h-10 border mt-1 rounded px-4 mb-4 bg-gray-50"
           />
         </div>
         <div className="mx-4">
           <label htmlFor="#">شماره موبایل:</label>
           <input
             type="text"
-            className="w-full h-10 border mt-1 rounded px-4  bg-gray-50"
+            className="w-full h-10 border mt-1 rounded px-4 mb-4 bg-gray-50"
           />
         </div>
         <div className="mx-4">
           <label htmlFor="#">نسبت:</label>
           <input
             type="text"
-            className="w-full h-10 border mt-1 rounded px-4  bg-gray-50"
+            className="w-full h-10 border mt-1 rounded px-4 mb-4 bg-gray-50"
           />
         </div>
         <div className="mx-4">
           <label htmlFor="#">ایمیل:</label>
           <input
             type="text"
-            className="w-full h-10 border mt-1 rounded px-4  bg-gray-50"
+            className="w-full h-10 border mt-1 rounded px-4 bg-gray-50"
           />
         </div>
-        <button className="bg-green-500 px-6 py-3">اضافه کردن</button>
+        <button className="bg-green-500 px-6 py-3 rounded-lg mt-6 mr-5 mb-2">اضافه کردن</button>
       </div>
     </div>
   );
