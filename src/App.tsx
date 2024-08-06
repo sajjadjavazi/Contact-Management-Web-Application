@@ -1,15 +1,7 @@
-import AddEditUsers from "./components/AddEditUsers/AddEditUsers";
-import UsersList from "./components/UsersList/UsersList";
-import Layout from "./layout/Layout";
-
+import Contact from "./pages/Contact";
 function App() {
   return (
-    <Layout>
-      <div className="flex justify-between">
-        <AddEditUsers />
-        <UsersList />
-      </div>
-    </Layout>
+    <Contact />
   );
 }
 
