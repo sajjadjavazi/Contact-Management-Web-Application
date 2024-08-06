@@ -4,10 +4,12 @@ import UserCart from "./UserCart/UserCart";
 import { CartData } from "../../data/CartData";
 
 const UsersList = () => {
-  const [finalSearchValue, setFinalSearchValue] = useState("ali");
+  const [finalSearchValue, setFinalSearchValue] = useState("");
+  const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearch = (value: string) => {
     setFinalSearchValue(value);
+    setHasSearched(true);
   };
 
   const filteredData = CartData.filter(
@@ -23,7 +25,11 @@ const UsersList = () => {
         <Search onSearch={handleSearch} />
       </div>
       <div className="bg-slate-100 w-11/12 rounded-lg mb-6 flex flex-wrap">
-        {filteredData.length > 0 ? (
+        {hasSearched && filteredData.length === 0 ? (
+          <div className="w-full text-center py-4">
+            <p className="text-red-500">مخاطب مورد نظر شما یافت نشد.</p>
+          </div>
+        ) : (
           filteredData.map((cart) => (
             <UserCart
               key={cart.id}
@@ -34,10 +40,6 @@ const UsersList = () => {
               email={cart.email}
             />
           ))
-        ) : (
-          <div className="w-full text-center py-4">
-            <p className="text-red-500">مخاطب مورد نظر شما یافت نشد.</p>
-          </div>
         )}
       </div>
     </div>
