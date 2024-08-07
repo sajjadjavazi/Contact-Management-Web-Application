@@ -5,11 +5,11 @@ type Cart = {
   relate: string;
   email: string;
   id?: number;
-  deleteAction:()=> void;
+  deleteAction: () => void;
 };
 
 
-const UserCart = ({name, lastName, phone, relate, email, id, deleteAction}: Cart) => {
+const UserCart = ({ name, lastName, phone, relate, email, id, deleteAction }: Cart) => {
   return (
     <div className="bg-slate-300 w-5/12 m-4 rounded-xl py-5 px-8" key={id}>
       <div className="mb-1">نام: {name} {lastName}</div>
