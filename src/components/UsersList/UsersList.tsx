@@ -1,19 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Search from "./Search";
 import UserCart from "./UserCart/UserCart";
-import { CartData } from "../../data/CartData";
+import { User } from "../../types/User";
 
-interface User {
-  id: number;
-  name: string;
-  lastName: string;
-  phone: number;
-  relate: string;
-  email: string;
+interface UsersListProps {
+  users: User[];
+  onDeleteUser: (id: number) => void;
 }
 
-const UsersList = () => {
-  const [contact, setContact] = useState<User[]>(CartData);
+const UsersList: React.FC<UsersListProps> = ({ users, onDeleteUser }) => {
   const [finalSearchValue, setFinalSearchValue] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
   const [userToDelete, setUserToDelete] = useState<number | null>(null);
@@ -23,7 +18,7 @@ const UsersList = () => {
     setHasSearched(true);
   };
 
-  const filteredData = contact.filter(
+  const filteredData = users.filter(
     (item) =>
       item.name.toLowerCase().includes(finalSearchValue.toLowerCase()) ||
       item.lastName.toLowerCase().includes(finalSearchValue.toLowerCase())
@@ -35,7 +30,7 @@ const UsersList = () => {
 
   const deleteContact = () => {
     if (userToDelete !== null) {
-      setContact(contact.filter((item) => item.id !== userToDelete));
+      onDeleteUser(userToDelete);
       setUserToDelete(null);
     }
   };
@@ -65,7 +60,6 @@ const UsersList = () => {
           ))
         )}
       </div>
-
       {userToDelete !== null && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
           <div className="bg-white p-6 rounded">
