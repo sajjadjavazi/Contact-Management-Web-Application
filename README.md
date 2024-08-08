@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Contact Management Web Application | [Demo](https://sajjadjavazi.github.io/Contact-Management-Web-Application/ "Demo")
+**This project is a Contact Management Web Application built using React and TypeScript. The application allows users to manage a list of contacts, including adding, editing, searching, and deleting contacts. It also includes form validation to ensure that users enter all necessary information when adding or editing a contact.**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
+- Features
+- Tech Stack
+- Project Structure
+- Contributing
+- License
+## Features
+- Add Contacts: Users can add new contacts to the list by providing a name, last name, phone number, relation, and email.
+- Edit Contacts: Users can edit existing contacts. The form will be pre-filled with the selected contact's information.
+- Search Contacts: Users can search for contacts by name or last name using the search bar.
+- Delete Contacts: Users can delete contacts from the list. A confirmation modal will appear before deletion.
+- Form Validation: The application ensures that all form fields are filled before a contact is added or edited.
+## Tech Stack
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static typing.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Vite**: Fast build tool and development server.
+## Project Structure
+src/
+├── components/
+│   ├── AddEditUsers/
+│   │   └── AddEditUsers.tsx
+│   ├── Search/
+│   │   └── Search.tsx
+│   ├── UserCart/
+│   │   └── UserCart.tsx
+│   └── UsersList/
+│       └── UsersList.tsx
+├── data/
+│   └── CartData.ts
+├── layout/
+│   └── Layout.tsx
+├── types/
+│   └── User.ts
+├── App.tsx
+└── main.tsx
 
-Currently, two official plugins are available:
+## Contributing
+Contributions are welcome! Please follow these steps:
+- Fork the repository.
+- Create a new branch: git checkout -b feature/your-feature-name.
+- Commit your changes: git commit -m 'Add some feature'.
+- Push to the branch: git push origin feature/your-feature-name.
+- Open a pull request.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/sajjadjavazi/Contact-Management-Web-Application/blob/master/LICENSE "LICENSE") file for details.
