@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Search from "./Search";
 import UserCart from "./UserCart/UserCart";
 import { User } from "../../types/User";
@@ -6,9 +6,10 @@ import { User } from "../../types/User";
 interface UsersListProps {
   users: User[];
   onDeleteUser: (id: number) => void;
+  onEditUser: (user: User) => void;
 }
 
-const UsersList: React.FC<UsersListProps> = ({ users, onDeleteUser }) => {
+const UsersList: React.FC<UsersListProps> = ({ users, onDeleteUser, onEditUser }) => {
   const [finalSearchValue, setFinalSearchValue] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
   const [userToDelete, setUserToDelete] = useState<number | null>(null);
@@ -50,12 +51,14 @@ const UsersList: React.FC<UsersListProps> = ({ users, onDeleteUser }) => {
           filteredData.map((cart) => (
             <UserCart
               deleteAction={() => confirmDelete(cart.id)}
+              editAction={() => onEditUser(cart)}
               key={cart.id}
               name={cart.name}
               lastName={cart.lastName}
               phone={cart.phone}
               relate={cart.relate}
               email={cart.email}
+              id={cart.id}
             />
           ))
         )}
