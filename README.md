@@ -19,24 +19,26 @@
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Vite**: Fast build tool and development server.
 ## Project Structure
-`src/` <br />
-`├── components/`<br />
-`│   ├── AddEditUsers/`<br />
-`│   │   └── AddEditUsers.tsx`<br />
-`│   ├── Search/`<br />
-`│   │   └── Search.tsx`<br />
-`│   ├── UserCart/`<br />
-`│   │   └── UserCart.tsx`<br />
-`│   └── UsersList/`<br />
-`│       └── UsersList.tsx`<br />
-`├── data/`<br />
-`│   └── CartData.ts`<br />
-`├── layout/`<br />
-`│   └── Layout.tsx`<br />
-`├── types/`<br />
-`│   └── User.ts`<br />
-`├── App.tsx`<br />
-`└── main.tsx`<br />
+```javascript
+src/
+├── components/
+│   ├── AddEditUsers/
+│   │   └── AddEditUsers.tsx
+│   ├── Search/
+│   │   └── Search.tsx
+│   ├── UserCart/
+│   │   └── UserCart.tsx
+│   └── UsersList/
+│       └── UsersList.tsx
+├── data/
+│   └── CartData.ts
+├── layout/
+│   └── Layout.tsx
+├── types/
+│   └── User.ts
+├── App.tsx
+└── main.tsx
+```
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
