@@ -18,6 +18,12 @@
 - **TypeScript**: Superset of JavaScript that adds static typing.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **Vite**: Fast build tool and development server.
+ <p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,ts,js,vite,html,tailwind,git,github,npm,vscode&theme=dark" />
+  </a>
+</p>
+
 ## Project Structure
 ```javascript
 src/
